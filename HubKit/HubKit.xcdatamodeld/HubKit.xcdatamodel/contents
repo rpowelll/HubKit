@@ -2,13 +2,13 @@
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Repo" representedClassName="HKRepo" syncable="YES">
         <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="fork" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="forkCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="hasDownloads" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="hasIssues" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="hasWiki" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="homepage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isFork" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="isPrivate" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="masterBranch" optional="YES" attributeType="String" syncable="YES"/>

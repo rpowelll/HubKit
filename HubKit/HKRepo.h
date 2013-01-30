@@ -14,7 +14,7 @@
 
 @interface HKRepo : HKRemoteManagedObject
 
-@property (nonatomic, retain) NSNumber *fork;
+@property (nonatomic, retain) NSNumber *isFork;
 @property (nonatomic, retain) NSNumber *forkCount;
 @property (nonatomic, retain) NSString *homepage;
 @property (nonatomic, retain) NSString *info;
