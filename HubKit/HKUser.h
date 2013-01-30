@@ -24,6 +24,8 @@
 #import <CoreData/CoreData.h>
 #import "HKRemoteManagedObject.h"
 
+@class HKRepo;
+
 /**
  A `HKUser` object represents a user record returned by the remote API.
  It provides persistence and a clean Objective-C interface to the response's
@@ -107,6 +109,9 @@
 /**A non-persistent variable to store the user's OAuth token */
 @property (nonatomic, strong) NSString *token;
 
+//** Repos this user is an owner of */
+@property (nonatomic, retain) NSSet *repos;
+
 /**@name Manage the current user */
 
 /**Sets the current user
@@ -125,5 +130,14 @@
  @return the current `HKUser`
  */
 + (instancetype)currentUser;
+
+@end
+
+@interface HKUser (CoreDataGeneratedAccessors)
+
+- (void)addReposObject:(HKRepo *)value;
+- (void)removeReposObject:(HKRepo *)value;
+- (void)addRepos:(NSSet *)values;
+- (void)removeRepos:(NSSet *)values;
 
 @end

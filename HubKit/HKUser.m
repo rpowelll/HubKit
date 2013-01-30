@@ -42,6 +42,7 @@ static HKUser *__currentUser = nil;
 @dynamic followerCount;
 @dynamic followingCount;
 @dynamic type;
+@dynamic repos;
 @synthesize token;
 
 + (NSString *)entityName
