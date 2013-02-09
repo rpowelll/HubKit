@@ -23,6 +23,7 @@
 #import <Foundation/Foundation.h>
 #import "HKDefines.h"
 #import "HKUser.h"
+#import "HKRepo.h"
 #import "NSArray+HKExtensions.h"
 #import "NSDictionary+HKExtensions.h"
 

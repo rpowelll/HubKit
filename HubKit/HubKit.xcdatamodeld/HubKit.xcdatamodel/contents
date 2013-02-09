@@ -13,7 +13,7 @@
         <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="masterBranch" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="openIssueCount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="openIssueCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="pushedAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="remoteID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="size" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
