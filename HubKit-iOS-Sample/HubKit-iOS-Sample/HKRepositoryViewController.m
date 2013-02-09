@@ -86,20 +86,21 @@
 {
     if (! [HKUser currentUser]) {
         [self loginUser];
-    } else {
-        [self.githubClient getCurrentUserReposWithCompletion:^(NSArray *collection, NSError *error) {
-            if (! error) {
-                self.tableItems = [collection map:^id(id object) {
-                    NSDictionary *repo = object;
-                    return [repo objectForKey:@"name"];
-                }];
-                
-                [self.tableView reloadData];
-            } else {
-                NSLog(@"Error: %@", error);
-            }
-        }];
+        return;
     }
+    
+    [self.githubClient getCurrentUserReposWithCompletion:^(NSArray *collection, NSError *error) {
+        if (! error) {
+            self.tableItems = [collection map:^id(id object) {
+                HKRepo *repo = object;
+                return repo.name;
+            }];
+            
+            [self.tableView reloadData];
+        } else {
+            NSLog(@"Error: %@", error);
+        }
+    }];
 }
 
 - (void)loginUser
