@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Repo" representedClassName="HKRepo" syncable="YES">
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="forkCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="hasDownloads" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="hasIssues" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="hasWiki" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="homepage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isFork" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isPrivate" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="masterBranch" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="openIssueCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="pushedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="remoteID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="size" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="watcherCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="owner" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="repos" inverseEntity="User" syncable="YES"/>
+    </entity>
     <entity name="User" representedClassName="HKUser" syncable="YES">
         <attribute name="avatarURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
@@ -18,8 +39,10 @@
         <attribute name="repoCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="repos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Repo" inverseName="owner" inverseEntity="Repo" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="160" positionY="192" width="128" height="300"/>
+        <element name="Repo" positionX="160" positionY="192" width="128" height="330"/>
+        <element name="User" positionX="160" positionY="192" width="128" height="315"/>
     </elements>
 </model>

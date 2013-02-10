@@ -130,10 +130,13 @@
 - (void)getCurrentUserReposWithCompletion:(HKArrayCompletionHandler)completion
 {
     [self.httpClient getAuthenticatedUserReposWithCompletion:^(NSArray *collection, NSError *error) {
-        // TODO: Needs to be mapped to model objects
+        NSMutableArray *repos = [[NSMutableArray alloc] initWithCapacity:[collection count]];
+        [collection enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            [repos addObject:[HKRepo objectWithDictionary:obj]];
+        }];
         
         if (completion) {
-            completion(collection, error);
+            completion(repos, error);
         }
     }];
 }
@@ -141,10 +144,13 @@
 - (void)getCurrentUserStarredReposWithCompletion:(HKArrayCompletionHandler)completion
 {
     [self.httpClient getAuthenticatedUserStarredReposWithCompletion:^(NSArray *collection, NSError *error) {
-        // TODO: Needs to be mapped to model objects
+        NSMutableArray *repos = [[NSMutableArray alloc] initWithCapacity:[collection count]];
+        [collection enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            [repos addObject:[HKRepo objectWithDictionary:obj]];
+        }];
         
         if (completion) {
-            completion(collection, error);
+            completion(repos, error);
         }
     }];
 }
@@ -152,10 +158,10 @@
 - (void)getRepositoryWithName:(NSString *)repositoryName user:(NSString *)userName completion:(HKObjectCompletionHandler)completion
 {
     [self.httpClient getRepositoryWithName:repositoryName user:userName completion:^(id object, NSError *error) {
-        // TODO: Needs to be mapped to model objects
-
+        HKRepo *repo = [HKRepo objectWithDictionary:object];
+        
         if (completion) {
-            completion(object, error);
+            completion(repo, error);
         }
     }];
 }

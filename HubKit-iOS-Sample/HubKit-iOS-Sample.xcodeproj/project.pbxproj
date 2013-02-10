@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		577A07D916B8E0AA0098236F /* HKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A07D816B8E0AA0098236F /* HKUser.m */; };
+		577A07DA16B8E0AA0098236F /* HKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A07D816B8E0AA0098236F /* HKUser.m */; };
+		577A07DD16B8E1480098236F /* HKRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A07DC16B8E1480098236F /* HKRepo.m */; };
+		577A07DE16B8E1480098236F /* HKRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A07DC16B8E1480098236F /* HKRepo.m */; };
 		57C6CA2416B641F300B4D188 /* HubKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57C6CA2216B641F300B4D188 /* HubKit.xcdatamodeld */; };
 		57C6CA2516B641F300B4D188 /* HubKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57C6CA2216B641F300B4D188 /* HubKit.xcdatamodeld */; };
-		57C6CA2816B647AC00B4D188 /* HKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C6CA2716B647AC00B4D188 /* HKUser.m */; };
-		57C6CA2916B647AC00B4D188 /* HKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C6CA2716B647AC00B4D188 /* HKUser.m */; };
 		57C6CA2E16B64B8700B4D188 /* HKManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C6CA2B16B64B8700B4D188 /* HKManagedObject.m */; };
 		57C6CA2F16B64B8700B4D188 /* HKManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C6CA2B16B64B8700B4D188 /* HKManagedObject.m */; };
 		57C6CA3016B64B8700B4D188 /* HKRemoteManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C6CA2D16B64B8700B4D188 /* HKRemoteManagedObject.m */; };
@@ -87,9 +89,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		577A07D716B8E0AA0098236F /* HKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKUser.h; path = ../HubKit/HKUser.h; sourceTree = "<group>"; };
+		577A07D816B8E0AA0098236F /* HKUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKUser.m; path = ../HubKit/HKUser.m; sourceTree = "<group>"; };
+		577A07DB16B8E1480098236F /* HKRepo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKRepo.h; path = ../HubKit/HKRepo.h; sourceTree = "<group>"; };
+		577A07DC16B8E1480098236F /* HKRepo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKRepo.m; path = ../HubKit/HKRepo.m; sourceTree = "<group>"; };
 		57C6CA2316B641F300B4D188 /* HubKit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HubKit.xcdatamodel; sourceTree = "<group>"; };
-		57C6CA2616B647AC00B4D188 /* HKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKUser.h; path = ../HubKit/HKUser.h; sourceTree = "<group>"; };
-		57C6CA2716B647AC00B4D188 /* HKUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKUser.m; path = ../HubKit/HKUser.m; sourceTree = "<group>"; };
 		57C6CA2A16B64B8700B4D188 /* HKManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKManagedObject.h; path = ../HubKit/HKManagedObject.h; sourceTree = "<group>"; };
 		57C6CA2B16B64B8700B4D188 /* HKManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKManagedObject.m; path = ../HubKit/HKManagedObject.m; sourceTree = "<group>"; };
 		57C6CA2C16B64B8700B4D188 /* HKRemoteManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKRemoteManagedObject.h; path = ../HubKit/HKRemoteManagedObject.h; sourceTree = "<group>"; };
@@ -250,6 +254,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		577A07DF16B8E1B80098236F /* HTTP Client */ = {
+			isa = PBXGroup;
+			children = (
+				A42E5E4A16A27B2900BB5907 /* HKGitHubAPIKeys.h */,
+				A42E5E4B16A27B2900BB5907 /* HKGitHubAPIKeys.m */,
+				A42E5E3816A27B0A00BB5907 /* HKHTTPClient.h */,
+				A42E5E3916A27B0A00BB5907 /* HKHTTPClient.m */,
+			);
+			name = "HTTP Client";
+			sourceTree = "<group>";
+		};
+		577A07E016B8E1BD0098236F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				57C6CA2A16B64B8700B4D188 /* HKManagedObject.h */,
+				57C6CA2B16B64B8700B4D188 /* HKManagedObject.m */,
+				57C6CA2C16B64B8700B4D188 /* HKRemoteManagedObject.h */,
+				57C6CA2D16B64B8700B4D188 /* HKRemoteManagedObject.m */,
+				577A07D716B8E0AA0098236F /* HKUser.h */,
+				577A07D816B8E0AA0098236F /* HKUser.m */,
+				A4D2278116AA8D3600BDE006 /* HKAuthorization.h */,
+				A4D2278216AA8D3700BDE006 /* HKAuthorization.m */,
+				577A07DB16B8E1480098236F /* HKRepo.h */,
+				577A07DC16B8E1480098236F /* HKRepo.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		577A07E116B8E2060098236F /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				A42E5E3416A27B0A00BB5907 /* HKDefines.h */,
+				A42E5E3516A27B0A00BB5907 /* HKDefines.m */,
+				A43E972F16A660BE00E05562 /* HKKeychain.h */,
+				A43E973016A660BE00E05562 /* HKKeychain.m */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
 		A42E5DFC16A278A200BB5907 = {
 			isa = PBXGroup;
 			children = (
@@ -324,23 +367,10 @@
 			children = (
 				A4B3C0FC16A7B38A00643BF3 /* HubKit.h */,
 				57E7201216B6913A00CC8A4F /* HubKit.m */,
-				57C6CA2A16B64B8700B4D188 /* HKManagedObject.h */,
-				57C6CA2B16B64B8700B4D188 /* HKManagedObject.m */,
-				57C6CA2C16B64B8700B4D188 /* HKRemoteManagedObject.h */,
-				57C6CA2D16B64B8700B4D188 /* HKRemoteManagedObject.m */,
-				57C6CA2616B647AC00B4D188 /* HKUser.h */,
-				57C6CA2716B647AC00B4D188 /* HKUser.m */,
-				A42E5E3816A27B0A00BB5907 /* HKHTTPClient.h */,
-				A42E5E3916A27B0A00BB5907 /* HKHTTPClient.m */,
-				A4D2278116AA8D3600BDE006 /* HKAuthorization.h */,
-				A4D2278216AA8D3700BDE006 /* HKAuthorization.m */,
-				A42E5E3416A27B0A00BB5907 /* HKDefines.h */,
-				A42E5E3516A27B0A00BB5907 /* HKDefines.m */,
-				A43E972F16A660BE00E05562 /* HKKeychain.h */,
-				A43E973016A660BE00E05562 /* HKKeychain.m */,
-				A42E5E4A16A27B2900BB5907 /* HKGitHubAPIKeys.h */,
-				A42E5E4B16A27B2900BB5907 /* HKGitHubAPIKeys.m */,
 				57C6CA2216B641F300B4D188 /* HubKit.xcdatamodeld */,
+				577A07E016B8E1BD0098236F /* Models */,
+				577A07DF16B8E1B80098236F /* HTTP Client */,
+				577A07E116B8E2060098236F /* Support */,
 				A4D2278716AA9C6C00BDE006 /* Categories */,
 			);
 			name = HubKit;
@@ -644,10 +674,11 @@
 				A43E978416A6820800E05562 /* NSArray+HKExtensions.m in Sources */,
 				A4D2278316AA8D3700BDE006 /* HKAuthorization.m in Sources */,
 				57C6CA2416B641F300B4D188 /* HubKit.xcdatamodeld in Sources */,
-				57C6CA2816B647AC00B4D188 /* HKUser.m in Sources */,
 				57C6CA2E16B64B8700B4D188 /* HKManagedObject.m in Sources */,
 				57C6CA3016B64B8700B4D188 /* HKRemoteManagedObject.m in Sources */,
 				57E7201316B6913A00CC8A4F /* HubKit.m in Sources */,
+				577A07D916B8E0AA0098236F /* HKUser.m in Sources */,
+				577A07DD16B8E1480098236F /* HKRepo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,10 +710,11 @@
 				A4D2279E16ABE23900BDE006 /* HKURLTestProtocol.m in Sources */,
 				A4D227A116ABE93B00BDE006 /* HKCannedDataSource.m in Sources */,
 				57C6CA2516B641F300B4D188 /* HubKit.xcdatamodeld in Sources */,
-				57C6CA2916B647AC00B4D188 /* HKUser.m in Sources */,
 				57C6CA2F16B64B8700B4D188 /* HKManagedObject.m in Sources */,
 				57C6CA3116B64B8700B4D188 /* HKRemoteManagedObject.m in Sources */,
 				57E7201416B6913A00CC8A4F /* HubKit.m in Sources */,
+				577A07DA16B8E0AA0098236F /* HKUser.m in Sources */,
+				577A07DE16B8E1480098236F /* HKRepo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
