@@ -26,13 +26,13 @@
 
 @class HKRepo, HKUser;
 
-@interface HKIssue : NSManagedObject
+@interface HKIssue : HKRemoteManagedObject
 
-@property (nonatomic, retain) NSNumber * number;
-@property (nonatomic, retain) NSString * state;
-@property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) NSString * body;
-@property (nonatomic, retain) NSDate * closedAt;
+@property (nonatomic, retain) NSNumber *number;
+@property (nonatomic, retain) NSString *state;
+@property (nonatomic, retain) NSString *title;
+@property (nonatomic, retain) NSString *body;
+@property (nonatomic, retain) NSDate *closedAt;
 @property (nonatomic, retain) HKUser *author;
 @property (nonatomic, retain) HKUser *assignee;
 @property (nonatomic, retain) HKRepo *repo;

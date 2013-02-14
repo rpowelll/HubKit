@@ -23,7 +23,7 @@
 #import "HKIssue.h"
 #import "HKRepo.h"
 #import "HKUser.h"
-
+#import "NSDictionary+HKExtensions.h"
 
 @implementation HKIssue
 
@@ -35,5 +35,25 @@
 @dynamic author;
 @dynamic assignee;
 @dynamic repo;
+
++ (NSString *)entityName
+{
+    return @"Issue";
+}
+
+- (void)unpackDictionary:(NSDictionary *)dictionary
+{
+    [super unpackDictionary:dictionary];
+    
+    self.number = [dictionary safeObjectForKey:@"number"];
+    self.state = [dictionary safeObjectForKey:@"state"];
+    self.title = [dictionary safeObjectForKey:@"title"];
+    self.body = [dictionary safeObjectForKey:@"body"];
+    
+    self.closedAt = [[self class] parseDate:[dictionary safeObjectForKey:@"closed_at"]];
+    
+    self.author = [HKUser objectWithDictionary:[dictionary safeObjectForKey:@"user"]];
+    self.assignee = [HKUser objectWithDictionary:[dictionary safeObjectForKey:@"assignee"]];
+}
 
 @end
