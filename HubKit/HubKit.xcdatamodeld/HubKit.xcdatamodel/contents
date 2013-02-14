@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Issue" representedClassName="HKIssue" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="closedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="remoteID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="assignee" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="assignedIssues" inverseEntity="User" syncable="YES"/>
+        <relationship name="author" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="authoredIssues" inverseEntity="User" syncable="YES"/>
+        <relationship name="repo" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Repo" inverseName="issues" inverseEntity="Repo" syncable="YES"/>
+    </entity>
     <entity name="Repo" representedClassName="HKRepo" syncable="YES">
         <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="forkCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -19,6 +32,7 @@
         <attribute name="size" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="watcherCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="issues" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Issue" inverseName="repo" inverseEntity="Issue" syncable="YES"/>
         <relationship name="owner" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="repos" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName="HKUser" syncable="YES">
@@ -39,10 +53,13 @@
         <attribute name="repoCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="assignedIssues" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Issue" inverseName="assignee" inverseEntity="Issue" syncable="YES"/>
+        <relationship name="authoredIssues" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Issue" inverseName="author" inverseEntity="Issue" syncable="YES"/>
         <relationship name="repos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Repo" inverseName="owner" inverseEntity="Repo" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Repo" positionX="160" positionY="192" width="128" height="330"/>
-        <element name="User" positionX="160" positionY="192" width="128" height="315"/>
+        <element name="Repo" positionX="160" positionY="192" width="128" height="345"/>
+        <element name="User" positionX="160" positionY="192" width="128" height="345"/>
+        <element name="Issue" positionX="160" positionY="192" width="128" height="210"/>
     </elements>
 </model>

@@ -11,6 +11,7 @@
 		577A07DA16B8E0AA0098236F /* HKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A07D816B8E0AA0098236F /* HKUser.m */; };
 		577A07DD16B8E1480098236F /* HKRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A07DC16B8E1480098236F /* HKRepo.m */; };
 		577A07DE16B8E1480098236F /* HKRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A07DC16B8E1480098236F /* HKRepo.m */; };
+		577B7DEB16CCB28700BE2862 /* HKIssue.m in Sources */ = {isa = PBXBuildFile; fileRef = 577B7DEA16CCB28700BE2862 /* HKIssue.m */; };
 		57C6CA2416B641F300B4D188 /* HubKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57C6CA2216B641F300B4D188 /* HubKit.xcdatamodeld */; };
 		57C6CA2516B641F300B4D188 /* HubKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57C6CA2216B641F300B4D188 /* HubKit.xcdatamodeld */; };
 		57C6CA2E16B64B8700B4D188 /* HKManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C6CA2B16B64B8700B4D188 /* HKManagedObject.m */; };
@@ -93,6 +94,8 @@
 		577A07D816B8E0AA0098236F /* HKUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKUser.m; path = ../HubKit/HKUser.m; sourceTree = "<group>"; };
 		577A07DB16B8E1480098236F /* HKRepo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKRepo.h; path = ../HubKit/HKRepo.h; sourceTree = "<group>"; };
 		577A07DC16B8E1480098236F /* HKRepo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKRepo.m; path = ../HubKit/HKRepo.m; sourceTree = "<group>"; };
+		577B7DE916CCB28700BE2862 /* HKIssue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKIssue.h; path = ../HubKit/HKIssue.h; sourceTree = "<group>"; };
+		577B7DEA16CCB28700BE2862 /* HKIssue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKIssue.m; path = ../HubKit/HKIssue.m; sourceTree = "<group>"; };
 		57C6CA2316B641F300B4D188 /* HubKit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HubKit.xcdatamodel; sourceTree = "<group>"; };
 		57C6CA2A16B64B8700B4D188 /* HKManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKManagedObject.h; path = ../HubKit/HKManagedObject.h; sourceTree = "<group>"; };
 		57C6CA2B16B64B8700B4D188 /* HKManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKManagedObject.m; path = ../HubKit/HKManagedObject.m; sourceTree = "<group>"; };
@@ -278,6 +281,8 @@
 				A4D2278216AA8D3700BDE006 /* HKAuthorization.m */,
 				577A07DB16B8E1480098236F /* HKRepo.h */,
 				577A07DC16B8E1480098236F /* HKRepo.m */,
+				577B7DE916CCB28700BE2862 /* HKIssue.h */,
+				577B7DEA16CCB28700BE2862 /* HKIssue.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -679,6 +684,7 @@
 				57E7201316B6913A00CC8A4F /* HubKit.m in Sources */,
 				577A07D916B8E0AA0098236F /* HKUser.m in Sources */,
 				577A07DD16B8E1480098236F /* HKRepo.m in Sources */,
+				577B7DEB16CCB28700BE2862 /* HKIssue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
